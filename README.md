@@ -1,88 +1,91 @@
-# SME-support-agent - Blockchain-Powered Business Assistant
-
-# Invoice System Feature
+# SME Support Agent
 
 ## Overview
 
-The Invoice System is the first core feature of the SME Support Agent platform. It provides small businesses with a blockchain-based solution for creating, tracking, and verifying payments for invoices. This feature leverages the immutability and transparency of blockchain technology to ensure secure and verifiable business transactions.
+SME Support Agent is a blockchain-powered platform designed to assist small and medium-sized enterprises (SMEs) in Nigeria with essential business operations. By leveraging the Stacks blockchain technology, this platform provides secure, transparent, and efficient tools for business management.
 
-## Key Functionality
+## Why SME Support Agent?
 
-The Invoice System smart contract (`invoice-system.clar`) implements the following functionality:
+Small and medium enterprises are the backbone of the Nigerian economy, contributing significantly to employment and GDP. However, many SMEs face challenges with:
 
-### 1. Invoice Creation
-- Business owners can create detailed invoices for their customers
-- Each invoice includes amount, description, due date, and customer information
-- Invoices are stored on the blockchain with a unique ID
+- Proper bookkeeping and financial management
+- Tax compliance and filing
+- Professional invoice creation and tracking
+- Customer relationship management
 
-### 2. Invoice Management
-- Business owners can view all their created invoices
-- Invoices can be marked as paid by the business owner
-- Unpaid invoices can be canceled if needed
+SME Support Agent addresses these challenges by providing a decentralized platform that offers reliability, security, and ease of use.
 
-### 3. Payment Verification
-- Customers can pay invoices and record the transaction on the blockchain
-- Payment transactions are linked to specific invoices
-- The payment status of invoices can be verified by all parties
+## Features
 
-### 4. Business Analytics
-- Business owners can track their invoice count
-- The system maintains a history of all invoice activities
+The platform includes the following key features:
 
-## Technical Implementation
+### 1. Blockchain-Based Invoice System
+- Create, track, and verify payment of invoices
+- Immutable record of all business transactions
+- Automated payment verification
+- Invoice history and analytics
 
-The smart contract is implemented in Clarity, the smart contract language for the Stacks blockchain. It uses:
+### 2. Digital Bookkeeping
+- Record income and expenses
+- Categorize transactions
+- Generate financial reports
+- Track business performance
 
-- **Maps** for storing invoice data and business statistics
-- **Data variables** for maintaining invoice IDs
-- **Read-only functions** for querying invoice information
-- **Public functions** for creating and managing invoices
+### 3. Tax Filing Assistant
+- Calculate tax obligations
+- Generate tax reports
+- Store tax-related documents
+- Provide tax filing reminders and tips
 
-## How to Use
+### 4. Customer Service Templates
+- Pre-designed professional communication templates
+- Customer interaction tracking
+- Feedback collection and management
+- Customer relationship analytics
 
-### For Business Owners
+### 5. Integration Capabilities
+- WhatsApp Business API integration
+- Mobile POS system compatibility
+- Banking system connections
+- Government tax portal integration
 
-1. **Create an Invoice**:
-   Call the `create-invoice` function with customer information, amount, description, and due date.
+## Technical Architecture
 
-2. **Mark an Invoice as Paid**:
-   When payment is received outside the blockchain, call `mark-invoice-paid` with the invoice ID.
+SME Support Agent is built on the Stacks blockchain, which provides:
 
-3. **Cancel an Invoice**:
-   If an invoice needs to be canceled, call `cancel-invoice` with the invoice ID.
+1. **Security**: Leveraging Bitcoin's security through Proof of Transfer (PoX)
+2. **Smart Contracts**: Written in Clarity, a decidable language designed for predictability and security
+3. **Scalability**: Efficient processing of business operations
+4. **Transparency**: Immutable record-keeping for business transactions
 
-### For Customers
+## Getting Started
 
-1. **Pay an Invoice**:
-   Call the `pay-invoice` function with the invoice ID and transaction information.
+### Prerequisites
+- Clarinet (Clarity development environment)
+- Node.js and npm
+- Stacks wallet
 
-2. **View Invoice Details**:
-   Use the `get-invoice` function to view details of an invoice.
+### Installation
+1. Clone this repository
+2. Install dependencies
+3. Deploy the contracts to the Stacks blockchain
 
-## Testing
+## Roadmap
 
-The feature includes comprehensive tests in the `invoice-system_test.ts` file, which verify:
+1. **Phase 1**: Invoice System Implementation (Current) It provides small businesses with a blockchain-based solution for creating, tracking, and verifying payments for invoices
+2. **Phase 2**: Bookkeeping and Financial Management
+3. **Phase 3**: Tax Filing Assistant
+4. **Phase 4**: Customer Service Templates
+5. **Phase 5**: Third-party Integrations (WhatsApp, POS systems)
 
-- Invoice creation functionality
-- Retrieval of invoice details
-- Payment processing
-- Authorization controls
-- Invoice cancellation
+## Contributing
 
-## Future Enhancements
+We welcome contributions to the SME Support Agent project. Please read our contributing guidelines before submitting pull requests.
 
-In future iterations, this feature will be expanded to include:
+## License
 
-1. Integration with cryptocurrency payment systems
-2. Automated payment reminders
-3. Invoice templates
-4. Multi-currency support
-5. Integration with the bookkeeping feature
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Security Considerations
+## Contact
 
-The smart contract implements several security measures:
-
-- Authorization checks to ensure only authorized parties can modify invoices
-- Validation of input parameters
-- Error handling for various edge cases
+For questions or support, please contact [project maintainer email].
